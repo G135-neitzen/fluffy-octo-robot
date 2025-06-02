@@ -12,11 +12,9 @@ function getHumanChoice(){
 }
 
 function game(){
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice, computerChoice);
-    }
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
     console.log(`Final Score - Human: ${humanScore}, Computer: ${computerScore}`);
 }
 
