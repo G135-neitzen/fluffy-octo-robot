@@ -7,10 +7,15 @@ function getComputerChoice(){
     return choices [randomIndex];
 }
 function getHumanChoice(){
-    choice = prompt("Enter rock, paper, or scissors").toLowerCase();
-    return choice;
+    const buttons = document.querySelectorAll('#container button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            choice = button.id;
+            console.log(`You chose: ${choice}`);
+            return choice;
+        });
+    });
 }
-
 function game(){
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
